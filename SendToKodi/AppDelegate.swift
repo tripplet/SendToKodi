@@ -12,12 +12,18 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-
+    
+    let mirroredDefaults = NSUserDefaults(suiteName: "group.com.tangemann.sendtokodi")!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleUserDefaultsChanged:", name: NSUserDefaultsDidChangeNotification, object: NSUserDefaults.standardUserDefaults())
     }
 
+    func handleUserDefaultsChanged(aNotification: NSNotification) {
+        mirroredDefaults.setValue(NSUserDefaults.standardUserDefaults().stringForKey("kodi_hostname")!, forKey: "kodi_hostname")
+        mirroredDefaults.synchronize()
+    }
+    
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }

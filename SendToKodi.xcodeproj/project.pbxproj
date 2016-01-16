@@ -10,7 +10,35 @@
 		CDB061431C498C5200E6E652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB061421C498C5200E6E652 /* AppDelegate.swift */; };
 		CDB061451C498C5300E6E652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB061441C498C5300E6E652 /* Assets.xcassets */; };
 		CDB061481C498C5300E6E652 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB061461C498C5300E6E652 /* MainMenu.xib */; };
+		CDB061571C498D0900E6E652 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CDB061561C498D0900E6E652 /* icon.icns */; };
+		CDB0615A1C498D0900E6E652 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB061591C498D0900E6E652 /* ShareViewController.swift */; };
+		CDB0615D1C498D0900E6E652 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB0615B1C498D0900E6E652 /* ShareViewController.xib */; };
+		CDB061611C498D0900E6E652 /* SendToKodiAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CDB061531C498D0900E6E652 /* SendToKodiAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDB0615F1C498D0900E6E652 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDB061371C498C5200E6E652 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDB061521C498D0900E6E652;
+			remoteInfo = SendToKodiAction;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CDB061651C498D0900E6E652 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CDB061611C498D0900E6E652 /* SendToKodiAction.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CDB0613F1C498C5200E6E652 /* SendToKodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendToKodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,10 +46,24 @@
 		CDB061441C498C5300E6E652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDB061471C498C5300E6E652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CDB061491C498C5300E6E652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB061531C498D0900E6E652 /* SendToKodiAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SendToKodiAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB061561C498D0900E6E652 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		CDB061581C498D0900E6E652 /* SendToKodiAction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SendToKodiAction.entitlements; sourceTree = "<group>"; };
+		CDB061591C498D0900E6E652 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		CDB0615C1C498D0900E6E652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
+		CDB0615E1C498D0900E6E652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB061661C49ABA300E6E652 /* SendToKodi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SendToKodi.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CDB0613C1C498C5200E6E652 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB061501C498D0900E6E652 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				CDB061411C498C5200E6E652 /* SendToKodi */,
+				CDB061541C498D0900E6E652 /* SendToKodiAction */,
 				CDB061401C498C5200E6E652 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CDB0613F1C498C5200E6E652 /* SendToKodi.app */,
+				CDB061531C498D0900E6E652 /* SendToKodiAction.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,12 +94,33 @@
 		CDB061411C498C5200E6E652 /* SendToKodi */ = {
 			isa = PBXGroup;
 			children = (
+				CDB061661C49ABA300E6E652 /* SendToKodi.entitlements */,
 				CDB061421C498C5200E6E652 /* AppDelegate.swift */,
 				CDB061441C498C5300E6E652 /* Assets.xcassets */,
 				CDB061461C498C5300E6E652 /* MainMenu.xib */,
 				CDB061491C498C5300E6E652 /* Info.plist */,
 			);
 			path = SendToKodi;
+			sourceTree = "<group>";
+		};
+		CDB061541C498D0900E6E652 /* SendToKodiAction */ = {
+			isa = PBXGroup;
+			children = (
+				CDB061591C498D0900E6E652 /* ShareViewController.swift */,
+				CDB0615B1C498D0900E6E652 /* ShareViewController.xib */,
+				CDB0615E1C498D0900E6E652 /* Info.plist */,
+				CDB061551C498D0900E6E652 /* Supporting Files */,
+			);
+			path = SendToKodiAction;
+			sourceTree = "<group>";
+		};
+		CDB061551C498D0900E6E652 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDB061561C498D0900E6E652 /* icon.icns */,
+				CDB061581C498D0900E6E652 /* SendToKodiAction.entitlements */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,15 +133,34 @@
 				CDB0613B1C498C5200E6E652 /* Sources */,
 				CDB0613C1C498C5200E6E652 /* Frameworks */,
 				CDB0613D1C498C5200E6E652 /* Resources */,
+				CDB061651C498D0900E6E652 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CDB061601C498D0900E6E652 /* PBXTargetDependency */,
 			);
 			name = SendToKodi;
 			productName = SendToKodi;
 			productReference = CDB0613F1C498C5200E6E652 /* SendToKodi.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CDB061521C498D0900E6E652 /* SendToKodiAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDB061621C498D0900E6E652 /* Build configuration list for PBXNativeTarget "SendToKodiAction" */;
+			buildPhases = (
+				CDB0614F1C498D0900E6E652 /* Sources */,
+				CDB061501C498D0900E6E652 /* Frameworks */,
+				CDB061511C498D0900E6E652 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SendToKodiAction;
+			productName = SendToKodiAction;
+			productReference = CDB061531C498D0900E6E652 /* SendToKodiAction.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -90,6 +174,22 @@
 				TargetAttributes = {
 					CDB0613E1C498C5200E6E652 = {
 						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					CDB061521C498D0900E6E652 = {
+						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -107,6 +207,7 @@
 			projectRoot = "";
 			targets = (
 				CDB0613E1C498C5200E6E652 /* SendToKodi */,
+				CDB061521C498D0900E6E652 /* SendToKodiAction */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +222,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDB061511C498D0900E6E652 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB0615D1C498D0900E6E652 /* ShareViewController.xib in Resources */,
+				CDB061571C498D0900E6E652 /* icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -132,7 +242,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDB0614F1C498D0900E6E652 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB0615A1C498D0900E6E652 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDB061601C498D0900E6E652 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDB061521C498D0900E6E652 /* SendToKodiAction */;
+			targetProxy = CDB0615F1C498D0900E6E652 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CDB061461C498C5300E6E652 /* MainMenu.xib */ = {
@@ -141,6 +267,14 @@
 				CDB061471C498C5300E6E652 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CDB0615B1C498D0900E6E652 /* ShareViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDB0615C1C498D0900E6E652 /* Base */,
+			);
+			name = ShareViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -230,7 +364,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SendToKodi/SendToKodi.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SendToKodi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tangemann.SendToKodi;
@@ -242,11 +378,41 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SendToKodi/SendToKodi.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SendToKodi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tangemann.SendToKodi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CDB061631C498D0900E6E652 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SendToKodiAction/SendToKodiAction.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SendToKodiAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tangemann.SendToKodi.SendToKodiAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CDB061641C498D0900E6E652 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SendToKodiAction/SendToKodiAction.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SendToKodiAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tangemann.SendToKodi.SendToKodiAction;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -267,6 +433,14 @@
 			buildConfigurations = (
 				CDB0614D1C498C5300E6E652 /* Debug */,
 				CDB0614E1C498C5300E6E652 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CDB061621C498D0900E6E652 /* Build configuration list for PBXNativeTarget "SendToKodiAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDB061631C498D0900E6E652 /* Debug */,
+				CDB061641C498D0900E6E652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
