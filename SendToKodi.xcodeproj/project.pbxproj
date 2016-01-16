@@ -134,6 +134,7 @@
 				CDB0613C1C498C5200E6E652 /* Frameworks */,
 				CDB0613D1C498C5200E6E652 /* Resources */,
 				CDB061651C498D0900E6E652 /* Embed App Extensions */,
+				CDD5AFE61C4AD06F00E6E652 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -232,6 +233,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CDD5AFE61C4AD06F00E6E652 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ln -sf \"$BUILD_DIR\" xcode_build";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CDB0613B1C498C5200E6E652 /* Sources */ = {
@@ -435,6 +452,7 @@
 				CDB0614E1C498C5300E6E652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDB061621C498D0900E6E652 /* Build configuration list for PBXNativeTarget "SendToKodiAction" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +461,7 @@
 				CDB061641C498D0900E6E652 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
