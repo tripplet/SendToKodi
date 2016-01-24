@@ -8,17 +8,12 @@
 
 import Cocoa
 
-class ShareViewController: NSViewController
-{
+class ShareViewController: NSViewController {
     @IBOutlet weak var progress: NSProgressIndicator!
 
-    override var nibName: String?
-        {
-        return "ShareViewController"
-    }
+    override var nibName: String? { return "ShareViewController" }
 
-    override func loadView()
-    {
+    override func loadView() {
         super.loadView()
         
         progress.startAnimation(nil)
@@ -35,14 +30,10 @@ class ShareViewController: NSViewController
         }
     }
     
-    func generateRequestDataFromUrl(url: NSURL) -> NSData!
-    {
-        let requestJsonYoutube = "{\"jsonrpc\": \"2.0\", \"method\": \"Player.Open\", \"params\":{\"item\": {\"file\" : \"plugin://plugin.video.youtube/?action=play_video&videoid=%%VID%%\" }}, \"id\" : \"1\"}"
+    func generateRequestDataFromUrl(url: NSURL) -> NSData! {
+        var vid : String?
         
-        let requestJsonGeneric = "{\"jsonrpc\": \"2.0\", \"method\": \"Player.open\", \"params\": {\"item\": {\"file\": \"%%URL%%\"}}, \"id\": 1}"
-        
-        var vid : String? = ""
-        
+        // If url is link to youtube video, extract video-id
         if url.description.containsString("youtube.com/watch") {
             let queryItems = NSURLComponents(string: url.description)?.queryItems
             vid = queryItems?.filter({$0.name == "v"}).first?.value
@@ -52,37 +43,37 @@ class ShareViewController: NSViewController
         }
         
         if let vid = vid {
-            return requestJsonYoutube.stringByReplacingOccurrencesOfString("%%VID%%", withString: vid)
-                                      .dataUsingEncoding(NSUTF8StringEncoding)
+            return ("{\"jsonrpc\": \"2.0\", \"method\": \"Player.Open\", \"params\": " +
+                    "{\"item\": {\"file\" : \"plugin://plugin.video.youtube/?action=play_video&videoid=\(vid)\" }}, \"id\" : \"1\"}")
+                   .dataUsingEncoding(NSUTF8StringEncoding)
         }
         else {
-            return requestJsonGeneric.stringByReplacingOccurrencesOfString("%%URL%%", withString: url.description)
-                                     .dataUsingEncoding(NSUTF8StringEncoding)
+            return ("{\"jsonrpc\": \"2.0\", \"method\": \"Player.open\", \"params\": " +
+                    "{\"item\": {\"file\": \"\(url.description)\"}}, \"id\": 1}")
+                    .dataUsingEncoding(NSUTF8StringEncoding)
         }
     }
     
-    func sendRequestToKodi(url: NSURL)
-    {
+    func sendRequestToKodi(url: NSURL) {
         let session = NSURLSession.sharedSession()
-        let hostname = NSUserDefaults(suiteName: "group.com.tangemann.sendtokodi")!.stringForKey("kodi_hostname")!
+        let hostname = NSUserDefaults(suiteName: USER_DEFAULTS_SUITE)!.stringForKey("kodi_hostname")!
         
-        let requestData = self.generateRequestDataFromUrl(url)!
+        let requestData = self.generateRequestDataFromUrl(url)
         
-        let request = NSMutableURLRequest(URL: NSURL(string: String(format: "http://%@:80/jsonrpc", hostname))!)
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://\(hostname):80/jsonrpc")!)
         request.HTTPMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(String(format: "%d", requestData.length), forHTTPHeaderField: "Content-Length")
+        request.setValue("application/json",         forHTTPHeaderField: "Accept")
+        request.setValue("application/json",         forHTTPHeaderField: "Content-Type")
+        request.setValue(String(requestData.length), forHTTPHeaderField: "Content-Length")
         request.HTTPBody = requestData
         
-        let task = session.dataTaskWithRequest(request){
+        let task = session.dataTaskWithRequest(request) {
             data, response, error in
-            
-            NSLog(String(data: data!, encoding: NSUTF8StringEncoding)!)
             
             if error == nil {
                 self.extensionContext!.completeRequestReturningItems(nil, completionHandler: nil)
-            } else {
+            }
+            else {
                 self.extensionContext!.cancelRequestWithError(NSError(domain: NSCocoaErrorDomain, code: NSUserCancelledError, userInfo: nil))
             }
         }

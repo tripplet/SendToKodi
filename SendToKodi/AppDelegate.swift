@@ -10,11 +10,11 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     @IBOutlet weak var window: NSWindow!
     
-    let mirroredDefaults = NSUserDefaults(suiteName: "group.com.tangemann.sendtokodi")!
+    let mirroredDefaults = NSUserDefaults(suiteName: USER_DEFAULTS_SUITE)!
 
+    // Save all user default into app group user defaults, so they can be accessed from the extension
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "handleUserDefaultsChanged:", name: NSUserDefaultsDidChangeNotification, object: NSUserDefaults.standardUserDefaults())
     }
@@ -23,11 +23,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         mirroredDefaults.setValue(NSUserDefaults.standardUserDefaults().stringForKey("kodi_hostname")!, forKey: "kodi_hostname")
         mirroredDefaults.synchronize()
     }
-    
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-
-
 }
-

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD8E97E11C556DB900E6E652 /* SendToKodi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8E97E01C556DB900E6E652 /* SendToKodi.swift */; };
+		CD8E97E21C556E2300E6E652 /* SendToKodi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8E97E01C556DB900E6E652 /* SendToKodi.swift */; };
 		CDB061431C498C5200E6E652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB061421C498C5200E6E652 /* AppDelegate.swift */; };
 		CDB061451C498C5300E6E652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB061441C498C5300E6E652 /* Assets.xcassets */; };
 		CDB061481C498C5300E6E652 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB061461C498C5300E6E652 /* MainMenu.xib */; };
@@ -41,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CD8E97E01C556DB900E6E652 /* SendToKodi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendToKodi.swift; sourceTree = "<group>"; };
 		CDB0613F1C498C5200E6E652 /* SendToKodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendToKodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB061421C498C5200E6E652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDB061441C498C5300E6E652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,9 +76,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD8E97DF1C556DA300E6E652 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CD8E97E01C556DB900E6E652 /* SendToKodi.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		CDB061361C498C5200E6E652 = {
 			isa = PBXGroup;
 			children = (
+				CD8E97DF1C556DA300E6E652 /* Shared */,
 				CDB061411C498C5200E6E652 /* SendToKodi */,
 				CDB061541C498D0900E6E652 /* SendToKodiAction */,
 				CDB061401C498C5200E6E652 /* Products */,
@@ -256,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB061431C498C5200E6E652 /* AppDelegate.swift in Sources */,
+				CD8E97E11C556DB900E6E652 /* SendToKodi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8E97E21C556E2300E6E652 /* SendToKodi.swift in Sources */,
 				CDB0615A1C498D0900E6E652 /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
