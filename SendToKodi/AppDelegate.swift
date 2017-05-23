@@ -12,23 +12,23 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     
-    let mirroredDefaults = NSUserDefaults(suiteName: USER_DEFAULTS_SUITE)!
+    let mirroredDefaults = UserDefaults(suiteName: USER_DEFAULTS_SUITE)!
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        NSApplication.sharedApplication().servicesProvider = self
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        NSApplication.shared().servicesProvider = self
         
         // Save all user default into app group user defaults, so they can be accessed from the extension
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.handleUserDefaultsChanged(_:)),
-                                                                   name: NSUserDefaultsDidChangeNotification,
-                                                                 object: NSUserDefaults.standardUserDefaults())
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.handleUserDefaultsChanged(_:)),
+                                                                   name: UserDefaults.didChangeNotification,
+                                                                 object: UserDefaults.standard)
     }
 
-    func handleUserDefaultsChanged(aNotification: NSNotification) {
-        mirroredDefaults.setValue(NSUserDefaults.standardUserDefaults().stringForKey("kodi_hostname")!, forKey: "kodi_hostname")
+    func handleUserDefaultsChanged(_ aNotification: Notification) {
+        mirroredDefaults.setValue(UserDefaults.standard.string(forKey: "kodi_hostname")!, forKey: "kodi_hostname")
         mirroredDefaults.synchronize()
     }
     
-    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }
 }
