@@ -19,6 +19,7 @@ class ShareViewController: NSViewController {
         progress.startAnimation(nil)
         
         let item = self.extensionContext!.inputItems[0] as! NSExtensionItem
+        
         if let attachments = item.attachments {
             (attachments.first as! NSItemProvider).loadItem(forTypeIdentifier: kUTTypeURL as String, options: nil, completionHandler: { (item, error) -> Void in
                 self.sendRequestToKodi(item as! URL)
@@ -28,6 +29,16 @@ class ShareViewController: NSViewController {
             let cancelError = NSError(domain: NSCocoaErrorDomain, code: NSUserCancelledError, userInfo: nil)
             self.extensionContext!.cancelRequest(withError: cancelError)
         }
+    }
+    
+    @IBAction func Settings(_ sender: NSButton) {
+        
+    }
+    
+    @IBAction func cancel(_ sender: NSButton) {
+        progress.stopAnimation(nil)
+        
+        self.extensionContext!.cancelRequest(withError: NSError(domain: NSCocoaErrorDomain, code: NSUserCancelledError, userInfo: nil))
     }
     
     func generateRequestDataFromUrl(_ url: URL) -> Data! {

@@ -106,10 +106,10 @@
 		CDB061411C498C5200E6E652 /* SendToKodi */ = {
 			isa = PBXGroup;
 			children = (
-				CDB061661C49ABA300E6E652 /* SendToKodi.entitlements */,
 				CDB061421C498C5200E6E652 /* AppDelegate.swift */,
-				CDB061441C498C5300E6E652 /* Assets.xcassets */,
 				CDB061461C498C5300E6E652 /* MainMenu.xib */,
+				CDB061661C49ABA300E6E652 /* SendToKodi.entitlements */,
+				CDB061441C498C5300E6E652 /* Assets.xcassets */,
 				CDB061491C498C5300E6E652 /* Info.plist */,
 			);
 			path = SendToKodi;
