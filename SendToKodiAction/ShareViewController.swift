@@ -31,10 +31,6 @@ class ShareViewController: NSViewController {
         }
     }
     
-    @IBAction func Settings(_ sender: NSButton) {
-        
-    }
-    
     @IBAction func cancel(_ sender: NSButton) {
         progress.stopAnimation(nil)
         

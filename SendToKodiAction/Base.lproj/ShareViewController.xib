@@ -41,22 +41,8 @@
                         <action selector="cancel:" target="-2" id="TJQ-eg-1Cf"/>
                     </connections>
                 </button>
-                <button focusRingType="none" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vaG-TR-Dj4">
-                    <rect key="frame" x="6" y="117" width="24" height="25"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSActionTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="PnE-j7-E3r">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="Settings:" target="-2" id="3Qt-aM-fL0"/>
-                    </connections>
-                </button>
             </subviews>
             <point key="canvasLocation" x="125.5" y="123.5"/>
         </customView>
     </objects>
-    <resources>
-        <image name="NSActionTemplate" width="14" height="14"/>
-    </resources>
 </document>
