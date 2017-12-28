@@ -10,9 +10,7 @@ import Cocoa
 
 class ShareViewController: NSViewController {
     @IBOutlet weak var progress: NSProgressIndicator!
-
-    override var nibName: String? { return "ShareViewController" }
-
+    
     override func loadView() {
         super.loadView()
         
@@ -46,18 +44,18 @@ class ShareViewController: NSViewController {
             vid = queryItems?.filter({$0.name == "v"}).first?.value
         }
         else if url.description.contains("youtu.be/") {
-            vid = url.path.substring(from: url.path.characters.index(url.path.startIndex, offsetBy: 1))
+            vid = String(url.path[url.path.index(url.path.startIndex, offsetBy: 1)...])
         }
         
         if let vid = vid {
             return ("{\"jsonrpc\": \"2.0\", \"method\": \"Player.Open\", \"params\": " +
-                    "{\"item\": {\"file\" : \"plugin://plugin.video.youtube/?action=play_video&videoid=\(vid)\" }}, \"id\" : \"1\"}")
-                   .data(using: String.Encoding.utf8)
+                "{\"item\": {\"file\" : \"plugin://plugin.video.youtube/?action=play_video&videoid=\(vid)\" }}, \"id\" : \"1\"}")
+                .data(using: String.Encoding.utf8)
         }
         else {
             return ("{\"jsonrpc\": \"2.0\", \"method\": \"Player.open\", \"params\": " +
-                    "{\"item\": {\"file\": \"\(url.description)\"}}, \"id\": 1}")
-                    .data(using: String.Encoding.utf8)
+                "{\"item\": {\"file\": \"\(url.description)\"}}, \"id\": 1}")
+                .data(using: String.Encoding.utf8)
         }
     }
     

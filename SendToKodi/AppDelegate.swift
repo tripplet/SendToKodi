@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let mirroredDefaults = UserDefaults(suiteName: USER_DEFAULTS_SUITE)!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        NSApplication.shared().servicesProvider = self
+        NSApplication.shared.servicesProvider = self
         
         // Save all user default into app group user defaults, so they can be accessed from the extension
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.handleUserDefaultsChanged(_:)),
@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                                                                  object: UserDefaults.standard)
     }
 
-    func handleUserDefaultsChanged(_ aNotification: Notification) {
+    @objc func handleUserDefaultsChanged(_ aNotification: Notification) {
         mirroredDefaults.setValue(UserDefaults.standard.string(forKey: "kodi_hostname")!, forKey: "kodi_hostname")
         mirroredDefaults.synchronize()
     }
