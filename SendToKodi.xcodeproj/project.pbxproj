@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD8E97E11C556DB900E6E652 /* SendToKodi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8E97E01C556DB900E6E652 /* SendToKodi.swift */; };
-		CD8E97E21C556E2300E6E652 /* SendToKodi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8E97E01C556DB900E6E652 /* SendToKodi.swift */; };
+		CD8E97E11C556DB900E6E652 /* globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8E97E01C556DB900E6E652 /* globals.swift */; };
+		CD8E97E21C556E2300E6E652 /* globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8E97E01C556DB900E6E652 /* globals.swift */; };
 		CDB061431C498C5200E6E652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB061421C498C5200E6E652 /* AppDelegate.swift */; };
 		CDB061481C498C5300E6E652 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB061461C498C5300E6E652 /* MainMenu.xib */; };
 		CDB0615A1C498D0900E6E652 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB061591C498D0900E6E652 /* ShareViewController.swift */; };
 		CDB0615D1C498D0900E6E652 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB0615B1C498D0900E6E652 /* ShareViewController.xib */; };
 		CDB061611C498D0900E6E652 /* SendToKodiAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CDB061531C498D0900E6E652 /* SendToKodiAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CDE5F54520CB11730053F6A2 /* KodiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE5F54420CB11730053F6A2 /* KodiRequest.swift */; };
+		CDE5F54720CD48450053F6A2 /* YoutubeURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE5F54620CD48450053F6A2 /* YoutubeURLHandler.swift */; };
+		CDE5F54B20CD4A3B0053F6A2 /* URLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE5F54A20CD4A3B0053F6A2 /* URLHandler.swift */; };
+		CDE5F54D20CD50660053F6A2 /* DirectURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE5F54C20CD50660053F6A2 /* DirectURLHandler.swift */; };
+		CDE5F54F20CD70D20053F6A2 /* BaseURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE5F54E20CD70D20053F6A2 /* BaseURLHandler.swift */; };
 		CDF0EB891FF536FB0029401E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF0EB881FF536FB0029401E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CD8E97E01C556DB900E6E652 /* SendToKodi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendToKodi.swift; sourceTree = "<group>"; };
+		CD8E97E01C556DB900E6E652 /* globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = globals.swift; sourceTree = "<group>"; };
 		CDB0613F1C498C5200E6E652 /* SendToKodi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendToKodi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB061421C498C5200E6E652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDB061471C498C5300E6E652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -53,6 +58,11 @@
 		CDB0615C1C498D0900E6E652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
 		CDB0615E1C498D0900E6E652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDB061661C49ABA300E6E652 /* SendToKodi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SendToKodi.entitlements; sourceTree = "<group>"; };
+		CDE5F54420CB11730053F6A2 /* KodiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KodiRequest.swift; sourceTree = "<group>"; };
+		CDE5F54620CD48450053F6A2 /* YoutubeURLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeURLHandler.swift; sourceTree = "<group>"; };
+		CDE5F54A20CD4A3B0053F6A2 /* URLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHandler.swift; sourceTree = "<group>"; };
+		CDE5F54C20CD50660053F6A2 /* DirectURLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectURLHandler.swift; sourceTree = "<group>"; };
+		CDE5F54E20CD70D20053F6A2 /* BaseURLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLHandler.swift; sourceTree = "<group>"; };
 		CDF0EB881FF536FB0029401E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,10 +84,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD40F0BD20CD763E0097B636 /* CustomHandler */ = {
+			isa = PBXGroup;
+			children = (
+				CDE5F54C20CD50660053F6A2 /* DirectURLHandler.swift */,
+				CDE5F54620CD48450053F6A2 /* YoutubeURLHandler.swift */,
+			);
+			name = CustomHandler;
+			sourceTree = "<group>";
+		};
 		CD8E97DF1C556DA300E6E652 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				CD8E97E01C556DB900E6E652 /* SendToKodi.swift */,
+				CD8E97E01C556DB900E6E652 /* globals.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -118,7 +137,7 @@
 			children = (
 				CDB061591C498D0900E6E652 /* ShareViewController.swift */,
 				CDB0615B1C498D0900E6E652 /* ShareViewController.xib */,
-				CDB0615E1C498D0900E6E652 /* Info.plist */,
+				CDE5F54920CD485C0053F6A2 /* KodiRequests */,
 				CDB061551C498D0900E6E652 /* Supporting Files */,
 			);
 			path = SendToKodiAction;
@@ -127,9 +146,21 @@
 		CDB061551C498D0900E6E652 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CDB0615E1C498D0900E6E652 /* Info.plist */,
 				CDB061581C498D0900E6E652 /* SendToKodiAction.entitlements */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDE5F54920CD485C0053F6A2 /* KodiRequests */ = {
+			isa = PBXGroup;
+			children = (
+				CDE5F54A20CD4A3B0053F6A2 /* URLHandler.swift */,
+				CDE5F54E20CD70D20053F6A2 /* BaseURLHandler.swift */,
+				CDE5F54420CB11730053F6A2 /* KodiRequest.swift */,
+				CD40F0BD20CD763E0097B636 /* CustomHandler */,
+			);
+			path = KodiRequests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +209,8 @@
 		CDB061371C498C5200E6E652 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0920;
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Tobias Tangemann";
 				TargetAttributes = {
 					CDB0613E1C498C5200E6E652 = {
@@ -266,7 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB061431C498C5200E6E652 /* AppDelegate.swift in Sources */,
-				CD8E97E11C556DB900E6E652 /* SendToKodi.swift in Sources */,
+				CD8E97E11C556DB900E6E652 /* globals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8E97E21C556E2300E6E652 /* SendToKodi.swift in Sources */,
+				CD8E97E21C556E2300E6E652 /* globals.swift in Sources */,
+				CDE5F54D20CD50660053F6A2 /* DirectURLHandler.swift in Sources */,
+				CDE5F54720CD48450053F6A2 /* YoutubeURLHandler.swift in Sources */,
+				CDE5F54F20CD70D20053F6A2 /* BaseURLHandler.swift in Sources */,
+				CDE5F54520CB11730053F6A2 /* KodiRequest.swift in Sources */,
 				CDB0615A1C498D0900E6E652 /* ShareViewController.swift in Sources */,
+				CDE5F54B20CD4A3B0053F6A2 /* URLHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,12 +357,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -373,12 +411,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
